@@ -1,0 +1,224 @@
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+header {
+  background-color: darkgrey;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+.navBar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-link {
+  transition: 0.7s ease;  
+}
+
+.nav-link:hover{
+  color: skyblue;
+}
+
+.menu {
+  display: flexbox;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: skyblue;
+}
+
+@media(max-width: 909px) {
+  .menu{
+    display: block;
+  }
+}
+
+.menu.active .bar:nth-child(2) {
+  opacity: 0;
+  
+}
+.menu.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-menu {
+  position: fixed;
+  left: -100%;
+  top: 70px;
+  gap: 0;
+  flex-direction: column;
+  background-color: darkgrey;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.nav-item {
+  margin: 16px 0;
+}
+
+.nav-menu.active{
+  left: 0;
+}
+
+label.logo{
+ font-size: 35px;
+ font-weight: bold;
+ color: skyblue;
+ padding: 0 100px;
+ line-height: 80px;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 80px;
+}
+
+.img-container {
+display: grid;
+grid-template-columns: auto auto auto;
+grid-template-rows: auto auto auto auto;
+height: 100%;
+width: 100%;
+
+}
+
+.img-div {
+  border: 2px solid skyblue;
+  background-color: darkgrey;
+
+}
+.css-selector {
+  background: linear-gradient(271deg, #ebf92a, #4df20f);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 16s ease infinite;
+  animation: AnimationName 16s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 58%}
+  50%{background-position:100% 43%}
+  100%{background-position:0% 58%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 58%}
+  50%{background-position:100% 43%}
+  100%{background-position:0% 58%}
+}
+
+
+
+/*
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: darkgrey;
+  line-height: 80px; 
+
+}
+
+nav ul {
+  float: right;
+  margin-right: 40px;
+}
+
+/*
+nav a{
+  font-size: 18px;
+  color: skyblue;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  padding: 7px 10px;
+  border-radius: 3px;
+} */
+
+
+
+
+
+
+
+
+
+/* a.active,a:hover{
+  border: 1px solid white;
+  transition: .5s;
+} */
+
+/* @media (max-width: 1048px) {
+  label.logo{
+    font-size: 32px;
+    padding-left: 60px;
+  }
+}
+nav ul{
+  margin-right: 20px;
+}
+nav a{
+  font-size: 17px;
+}
+@media (max-width: 909px){ 
+  nav #icon{
+    display: block;
+  }
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: skyblue;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+  }
+  nav li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav a{
+    font-size: 20px;
+
+  }
+  a.active,a:hover{
+    border: none;
+    color: darkgrey;
+
+  }
+  nav ul.show{
+
+  }
+}
+ */
